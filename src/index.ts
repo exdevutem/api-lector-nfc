@@ -37,10 +37,11 @@ app.get('/:nfc_id', async (c) => {
 
   if(databaseResponse.results.length === 0) {
     return c.json({
+      status: 'error',
       error: {
         mensaje: `No encontramos el tag ${nfc_id}!`,
         codigo: 1
-      }
+      },
     }, 404)
   }
 
@@ -54,6 +55,7 @@ app.get('/:nfc_id', async (c) => {
 
   if(!properties) {
     return c.json({
+      status: 'error',
       error: {
         mensaje: `No encontramos propiedades en la página!`,
         codigo: 2
@@ -65,6 +67,7 @@ app.get('/:nfc_id', async (c) => {
   const nombre = properties['Nombre']['title'][0]['plain_text']
 
   return c.json({
+    status: 'ok',
     nombre,
     puesto,
     nfc_id,
