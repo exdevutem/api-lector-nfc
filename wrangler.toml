@@ -1,6 +1,9 @@
 name = "api-lector-nfc"
 compatibility_date = "2023-12-01"
 
+[placement]
+mode = "smart"
+
 # [vars]
 # MY_VAR = "my-variable"
 
