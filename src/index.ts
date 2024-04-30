@@ -16,7 +16,7 @@ app.get('/:nfc_id', async (c) => {
         {
           property: 'NFC ID',
           rich_text: {
-            contains: nfc_id
+            equals: nfc_id
           }
         },
         {
