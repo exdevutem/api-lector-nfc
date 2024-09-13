@@ -22,7 +22,7 @@ app.get('/:nfc_id', async (c) => {
         {
           property: 'Puesto de trabajo',
           select: {
-            equals: 'Miembro'
+            equals: 'Miembro Activo'
           }
         },
         {
